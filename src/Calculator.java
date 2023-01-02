@@ -12,7 +12,7 @@ public class Calculator {
     //BinaryOperator<Integer> divide = (x, y) -> y>0 && y<0 ? x / y : 0; //Возникает ошибка деления на 0.
 
     //todo: Решить проблему можно разными путями. №1: Нужно ловить Exception. №2: нужно задавть проверку для "y".
-    BinaryOperator<Integer> divide = (x, y) -> y.equals(0) ? 0 : x / y; //Этот способ также считаю уместным для данной работы.
+    BinaryOperator<Integer> divide = (x, y) -> y == 0 ? 0 : x / y; //Этот способ также считаю уместным для данной работы.
 
 
     UnaryOperator<Integer> pow = x -> x * x;
